@@ -1,0 +1,30 @@
+{
+  "name": "school-voice-notice",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n web,api \"vite\" \"node --env-file=.env --watch server.js\"",
+    "build": "vite build",
+    "start": "vite build && node --env-file=.env server.js",
+    "create-user": "node --env-file=.env scripts/create-user.js",
+    "setup": "node scripts/setup.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "lucide-react": "^0.453.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "read-excel-file": "5.8.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.0.1",
+    "vite": "^5.4.10"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
